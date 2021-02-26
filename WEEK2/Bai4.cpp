@@ -1,21 +1,67 @@
 #include<iostream>
 using namespace std;
-int main()
+bool namnhuan (int);
+bool thang31 (int);
+void output (int, int, int);
+main()
 {
-	int ngay, thang, nam, k;
+	int special = 28;
+	int ngay, thang, nam;
+	int date, month, year;
 	char daugach;
 	cin >> ngay >> daugach >> thang >> daugach >> nam;
-	while (k != 0)
+	if (namnhuan(nam))
 	{
-		
-	if (thang >= 10 ) 
-	{
-		cout << ngay << daugach << thang << daugach << nam;
+		special = 29;
 	}
-	else 
+	int x = 1;
+	int check = namnhuan(nam);
+	while (x!=0)
 	{
-		cout << ngay << daugach << "0"<< thang << daugach << nam;
+		date = ngay;
+		month = thang;
+		year = nam;
+		cin >> x;
+		if ( thang31(thang))
+		{
+			if (date <= 0)
+			{
+				date = 31 + date; 
+				month--;
+			}
+			if (date > 31)
+			{
+				date = date - 31;
+				month++;
+			}
+		}
+			else 
+			{
+				if (date <= 0)
+				{
+					date = 30 - 1;
+					month--;
+				}
+				if (date > 30 )
+				{
+					date = date - 30;
+					month++;
+				}
+			}
+				if (month > 12)
+				{
+					month = 1; 
+					year++;
+				}
+				else if (month < 1)
+				{
+					month = 12;
+					year--;
+				}
+				output(date,month,year);
 	}
-    }
-	return 0;
+}
+bool thang31 (int x)
+{
+	
 }
