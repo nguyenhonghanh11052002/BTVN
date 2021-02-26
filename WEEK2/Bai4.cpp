@@ -63,5 +63,32 @@ main()
 }
 bool thang31 (int x)
 {
-	
+ if (x <= 7 && x%2 == 1)
+ {
+	 return true;
+ }
+if (x > 7 && x%2 == 0)
+  {
+		return true;
+  }
+	return false;
 }
+bool namnhuan (int x);
+{
+	if (x % 400 == 0 || (x%100 != 0 && x%4 == 0)
+	    {
+		    return true;
+	    }
+	    return false;
+}
+void output (int d, int m, int y)
+	    {
+		    if (d < 10 && m < 10)
+		    {cout << '0' << d << "-0" << m << '-' << y << endl;}
+		    if (d < 10 && m >= 10)
+		    {cout << '0' << d << '-' << m << '-' << y << endl;}
+		    if (d >=10 && m < 10)
+		    {cout << d << "-0" << m << '-' << y << endl;}
+		    if (d >= 10 && m >= 10)
+		    {cout << d << '-' << m << '-' << y << endl;}
+	    }
